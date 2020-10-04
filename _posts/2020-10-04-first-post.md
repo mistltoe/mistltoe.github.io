@@ -5,3 +5,4 @@ categories: mistltoe update
 ---
 
 first post
+<script id="dsq-count-scr" src="//mistltoe.disqus.com/count.js" async></script>
