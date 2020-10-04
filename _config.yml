@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Hur, HaengJeon"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "beginner for R and python"
+  location         : "Jeonju, Republic of Korea"
+  email            : "mistltoe@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
