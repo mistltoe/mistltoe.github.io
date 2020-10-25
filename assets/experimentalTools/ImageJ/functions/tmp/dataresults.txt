@@ -1,0 +1,30 @@
+Basic protocol
+1. Image source: tiff files exported from mrxs(3DHISTECH Ltd.) by ParanormicViewer
+2. Image Scale: large(5000 x 5000 in femur image or 4000 x 12000 in calvaria), resize(25% x 25%)
+3. Colour deconvolution: H&E -> Colour_2 for cytosol area (hematoxylin stain)
+4. Calculation of stained Area = (Area*pArea)/(sArea*spArea*10000)
+name 	 sArea 	 sMean 	 spArea 	 area 	 mean 	 pArea 	 stainedArea 	 integratedDensity
+1: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\boneDefect_imageManipulation_HnEAnalysis.java
+2: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\boneDefect_imageManipulation_MassonTrichromeAnalysis.ijm
+3: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\boneDefect_imageManipulation_MassonTrichromeAnalysis.java
+4: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\boneDefect_total.txt
+5: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\bone_total_analysis.ijm
+6: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\calv_HnE_Analysis.ijm
+7: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\calv_HnE_Analysis.txt
+8: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\data/
+9: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\dataresults.txt
+10: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\Desc.txt
+11: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\fileManipulation.txt
+12: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\golgi_fromWeb.java
+13: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnEQuant_AutonManual_PolygonSelection.ijm.ijm.ijm
+14: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnE_by_HHJ.ijm
+15: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnE_calv_8w_part1.txt
+16: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnE_quant.java
+17: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnE_quant_20180822.txt
+18: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnE_quant_batchMode.txt
+19: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\HnE_quant_webSourceScsripts.txt
+20: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\Large/
+21: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\Large_resize/
+22: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\PVExportToFinalAnalysis.txt
+23: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\refMacro.java
+24: C:\Users\Work.Windows\Documents\experimentalTools\ImageJ\sourceCode\Rotate/

@@ -6,11 +6,13 @@ main:
     url: /tags/
   - title: "분류"
     url: /categories/
+  - title: "즐겨찾기"
+    url: /links/
+  - title: "둘러보기"
+    url: /sitemap/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/

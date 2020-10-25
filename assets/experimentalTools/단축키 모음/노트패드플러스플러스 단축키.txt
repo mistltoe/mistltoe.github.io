@@ -1,0 +1,22 @@
+노트패드플러스 단축키
+F11: 전체화면 전환
+F12: 포스트잇 (현재 창크기에서 윈도우 틀 숨김)
+Ctrl+N: 새 파일(New)
+Ctrl+O: 파일 열기(Open)
+Ctrl+P: 인쇄(Print)
+Ctrl+S: 저장(Save)
+Ctrl+W: 탭(파일) 닫기
+Ctrl+B: 소괄호(), 중괄호{} 짝 찾기
+Ctrl+D: 행 복제 (또는 선택영역 복제) ★
+Ctrl+Q: 블럭 주석 토글 ★★★
+Ctrl+K: 블럭 주석 적용
+Ctrl+⇧ Shift+K: 블럭 주석 해제
+Ctrl+⇧ Shift+Q: 스트림 주석
+Ctrl+⇧ Shift+↑: 현재 줄을 위로 이동
+Ctrl+⇧ Shift+↓: 현재 줄을 아래로 이동
+Ctrl + 마우스 휠: 확대/축소 ★★
+Alt+0: 모두 접기
+Alt+⇧ Shift+0: 모두 펼치기
+Ctrl+Alt+F: 현재단계 접기
+Ctrl+Alt+⇧ Shift+F: 현재단계 펼치기
+Alt+H: 라인 숨기기

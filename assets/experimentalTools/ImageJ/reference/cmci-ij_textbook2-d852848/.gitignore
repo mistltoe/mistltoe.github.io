@@ -1,0 +1,12 @@
+.DS_Store
+*.aux
+*.log
+*.out
+*.pdfsync
+*.toc
+*.synctex.gz
+*Thums.db
+*Thumbs.db
+CMCImacrocourse.tex.orig
+CMCImacrocourse.tex.20150615
+tags

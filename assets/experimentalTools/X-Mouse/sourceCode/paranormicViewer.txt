@@ -1,0 +1,107 @@
+###############################################################################################################
+## X-mouse Macro
+###############################################################################################################
+
+
+###############################################################################################################
+# For paranormic viewer export
+default setting without 
+magnification -> 1:8
+Available regions -> Caption (the first one)
+Desination Path -> presetting
+
+# sourceCode
+Right Button: {CTRL}{F4}
+Button4: {CTRL}e
+Button5: {TAB}{DOWN}{DOWN}{DOWN}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{SPACE}{TAB}{SPACE}{TAB}{TAB}{TAB}{RETURN}
+
+
+
+
+###############################################################################################################
+# For image insert with powerpoint
+
+custom shortcut setting for fill with figure: alt+5
+{ALT}5{TAB}{TAB}{TAB}{RETURN}
+{MSET:173,10}{LMB}
+
+
+
+
+
+
+
+
+###############################################################################################################
+## X-mouse Manual
+Type the key sequence into the box above.
+You can simulate the following extended keys using the specified tags...
+
+Modifier tags:
+  {CTRL} {RCTRL} {ALT} {RALT} {SHIFT} {RSHIFT} {LWIN} {RWIN} {APPS}
+  NOTE:	modifier tags can be combined like {CTRL}{ALT} but apply to the NEXT KEY ONLY.
+	For example, to send CTRL+a+CTRL+s you should type '{CTRL}A{CTRL}S'.
+
+Extended key tags:
+  {DEL} {INS} {PGUP} {PGDN} {HOME} {END} {RETURN} {ESCAPE} {BACKSPACE}
+  {TAB} {PRTSCN} {PAUSE} {SPACE} {CAPSLOCK} {NUMLOCK} {SCROLLLOCK} {BREAK} {CTRLBREAK}
+
+Direction key tags:		{UP} {DOWN} {LEFT} {RIGHT}
+Function key tags:		{F1, F2, F3 ... F24}
+Volume key tags:		{VOL+}, {VOL-}, {MUTE}
+Brightness control tags:	{BRIGHTNESS+}, {BRIGHTNESS-}
+Mouse button tags:		{LMB}, {RMB}, {MMB}, {MB4/XMB1}, {MB5/XMB2}
+Mouse wheel tags:		{MWUP}, {MWDN}, {TILTL}, {TILTR}
+Numeric keypad tags:	{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}
+Web/Browser keys:		{BACK}, {FORWARD}, {STOP}, {REFRESH}, {WEBHOME},
+			{SEARCH}, {FAVORITES}
+Toggle keys:		{NUMLOCKON}, {NUMLOCKOFF}, {CAPSLOCKON}
+			{CAPSLOCKOFF}, {SCROLLLOCKON}, {SCROLLLOCKOFF}
+Special function tags:	{WAIT:n} inserts a delay of <n> seconds.
+			{WAITMS:n} inserts a delay of <n> milliseconds.
+			{HOLD:n} holds the next key down for <n> seconds.
+			{HOLDMS:n} holds the next key down for <n> milliseconds.
+			{VKC:n} Sends the specified virtual key code.
+			{EXT:n} Sends the specified extended virtual key code.
+			{CLEAR} Clears any modifier tags {CTRL},{ALT} etc.
+			{SC:n} Sends the specified keyboard scan code.
+			{SCE:n} Sends the specified extended keyboard scan code.
+			{CB:<text>} Copies the specified <text> to the clipboard.
+
+Movement tags:		{MADD:x,y} Move cursor X & Y position by <x,y> pixels
+			{MSET:x,y} Set cursor position to <x,y> (relative to primary monitor)
+			{PSET:x,y} Set cursor position to <x,y> (relative to profile window)
+			{ASET:x,y} Set cursor position to <x,y> (relative to active window)
+			{MSAVE:n} Save the current cursor position to memory <n> (1-10)
+			{MREST:n} Restore the saved cursor position from memory <n> (1-10)
+
+Application tags:		{RUN:<application>} {RUN:<full path to exe>}
+			Run the specified application. If the application is not in the system PATH
+			please specify the full path to the executable (including .EXE)
+
+Action tags:		{ACTIVATE} Activate the window under the cursor.
+			{ACTIVATEPARENT} Activate the parent of the window under the cursor.
+			{ACTIVATETOP} Activate the top level (root) owner of the window under the cursor.
+
+Windows Message tags:	{POSTWM:<M>,<L>,<W>} Post a message to the window under the cursor.
+			{SENDWM:<M>,<L>,<W>} Send a message to the window under the cursor.
+			WHERE:	<M> is the message, <L> is the LPARAM value and <W> is the WPARAM value.
+			NOTE:	<M>, <L> & <W> can be specified in decimal (eg. 16) or hex (eg. 0x10).
+
+Special tags for send methods 1,2,4,5,6,7 & 9:
+			{PRESS} Press down the following key
+			{RELEASE} Release (let go of) the following key
+			NOTE: You must {RELEASE} any key you {PRESS} in the same sequence!
+
+For example:
+  To close a window: {ALT}{F4}
+  To select all items: {CTRL}A
+  To type bold 'my text' in Microsoft Word: {CTRL}bmy text{CTRL}b
+  To send an 'r' key with a 50ms delay between the down and up, {HOLDMS:50}r
+  To turn OFF numlock, {NUMLOCKOFF}
+  To press a b and c, wait 100ms and release them: {PRESS}abc{WAITMS100}{RELEASE}cba
+  
+  
+  
+  
+  

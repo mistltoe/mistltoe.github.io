@@ -1,0 +1,110 @@
+// http://imagej.1557.x6.nabble.com/Macros-for-Colour-Deconvolution-plugin-saving-multiple-files-td5005383.html
+
+// daschneider9
+1. select the input directory 
+2. select the output directory 
+3. run("Subtract Background...", "rolling=50 light"); 
+4. run("Colour Deconvolution", "vectors=[H DAB]"); 
+(5. select the input directory) 
+(6. select the output directory) 
+7. setAutoThreshold("Default"); 
+8. //run("Threshold..."); 
+9. setThreshold(0, 146); 
+10. run("Convert to Mask"); 
+11. run("Fill Holes"); 
+12. run("Convert to Mask"); 
+13. run("Watershed"); 
+14. run("Set Scale...", "distance=63 known=10 pixel=1 unit=um"); 15. run("Analyze Particles...", "size=30.00-300.00 circularity=0.00-1.00 show=Outlines display exclude summarize"); 
+
+
+// drew_c
+dir1 = getDirectory("Choose Source Directory "); 
+list = getFileList(dir1); 
+setBatchMode(true); 
+for (i=0; i<list.length; i++) { 
+showProgress(i+1, list.length); 
+open(dir1+list[i]); 
+run("Subtract Background...", "rolling=50 light"); 
+imgName=getTitle(); 
+run("Colour Deconvolution", "vectors=[H DAB]"); 
+selectWindow(imgName + "-(Colour_3)"); 
+close(); 
+selectWindow(imgName +"-(Colour_1)"); 
+title = getTitle(); 
+print("title: " + title); 
+saveAs("Tiff", "C:\\Dropbox\\University\\PhD\\Mouse Project\\Fresh tissues\\Colour 1\\"+title); 
+close(); 
+selectWindow(imgName + "-(Colour_2)"); 
+title = getTitle(); 
+print("title: " + title); 
+saveAs("Tiff", "C:\\Dropbox\\University\\PhD\\Mouse Project\\Fresh tissues\\Colour 2\\"+title); 
+close(); 
+title = getTitle(); 
+saveAs("Tiff", "C:\\Dropbox\\University\\PhD\\Mouse Project\\Fresh tissues\\Colour 1\\"+title); 
+close(); 
+} 
+
+
+// Jacqueline Ross
+// [g1]=15.12007 [b1]=14.169498 [r2]=53.738953 [g2]=114.16744 [b2]=106.36251 [r3]=1.4947393 [g3]=7.050659 [b3]=12.738025");) 
+// with your own choice. 
+
+// version 1
+dir1 = getDirectory("Choose Source Directory "); 
+dir2 = getDirectory("Choose Destination Directory "); 
+list = getFileList(dir1); 
+setBatchMode(true); 
+for (i=0; i<list.length; i++) { 
+showProgress(i+1, list.length); 
+open(dir1+list[i]); 
+imgName=getTitle(); 
+run("Colour Deconvolution", "vectors=[User values] show [r1]=60.27969 [g1]=15.12007 [b1]=14.169498 [r2]=53.738953 [g2]=114.16744 [b2]=106.36251 [r3]=1.4947393 [g3]=7.050659 [b3]=12.738025"); 
+//close windows we don't need 
+selectWindow(imgName + "-(Colour_3)"); 
+close(); 
+selectWindow(imgName +"-(Colour_1)"); 
+title = getTitle(); 
+saveAs("TIFF", dir2 + title); 
+close(); 
+selectWindow(imgName + "-(Colour_2)"); 
+title = getTitle(); 
+saveAs("TIFF", dir2 + title); 
+close(); 
+} 
+
+// version 2
+dir1 = getDirectory("Choose Source Directory "); 
+dir2 = getDirectory("Choose Destination Directory "); 
+list = getFileList(dir1); 
+setBatchMode(true); 
+for (i=0; i<list.length; i++) { 
+showProgress(i+1, list.length); 
+open(dir1+list[i]); 
+imgName=getTitle(); 
+run("Colour Deconvolution", "vectors=[User values] show [r1]=60.27969 [g1]=15.12007 [b1]=14.169498 [r2]=53.738953 [g2]=114.16744 [b2]=106.36251 [r3]=1.4947393 [g3]=7.050659 [b3]=12.738025"); 
+//close windows we don't need 
+selectWindow(imgName + " (Colour[3])"); 
+close(); 
+selectWindow(imgName +" (Colour[1])"); 
+title = getTitle(); 
+saveAs("TIFF", dir2 + title); 
+close(); 
+selectWindow(imgName + " (Colour[2])"); 
+title = getTitle(); 
+saveAs("TIFF", dir2 + title); 
+close(); 
+} 
+
+
+// https://www.researchgate.net/post/How_do_I_conduct_semi_quantification_with_DAB_chromogen_IHC_in_ImageJ
+// Hesham N. Mustafa
+1. Download the free "Fiji" version of ImageJ from http://fiji.sc. All subsequent steps are performed in Fiji.
+2. Open a DAB image.
+3. Run Image > Color > Colour Deconvolution.
+4. From the Vectors pull-down, choose "H DAB" as the stain (this assumes your images are correctly white-balanced, otherwise you have to define your own colors by choosing "From ROI" for the vector then drawing your own Regions Of Interest to define the stain colors).
+5. Click OK in the Colour Deconvolution window, you will get three new images. The one with "Colour_2" in the title is the DAB image (Colour_1 is the hematoxylin image), you will quantify the Colour_2 image.
+6. Run Analyze > Set Measurements and select "Mean gray value" and "Display label".
+7. Select the Colour_2 image window.
+8. Run Analyze > Measure (or press Ctrl-m); a "Results" window will pop up with the quantification in units of intensity.
+9. You need to convert the intensity numbers in the Results window to Opitcal Density (OD) numbers with the following formula:
+OD = log(max intensity/Mean intensity), where max intensity = 255 for 8-bit images.

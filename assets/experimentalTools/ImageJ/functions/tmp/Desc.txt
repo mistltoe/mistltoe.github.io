@@ -1,0 +1,15 @@
+Reference
+
+https://www.researchgate.net/post/Any_good_methods_for_staining_quantifications_using_computer_programs
+http://www.mecourse.com/landinig/software/cdeconv/cdeconv.html
+http://imagejdocu.tudor.lu/
+
+## ImageJ builtin macro
+https://imagej.nih.gov/ij/developer/macro/functions.html
+
+
+0~255 사이의 수 중에서 255에 근접할수록 8 비트 그림 상테서 흰 색에 가까운 정도를 나타냄
+따라서 흡광도는 다음과 같이 계산할 수 있음: log(255/측정 값)
+
+면역 염색은 화학양론(stoichiometry)을 따르지 않기 때문에 염색된 정도가 항원-항체 반응 정도에 비례하지 않음
+또한 DAB 염색은 Beer-Lambert 법칙을 따르지 않음

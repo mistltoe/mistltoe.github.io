@@ -1,0 +1,40 @@
+// get maximum value in array 
+
+function getmax(inputarray) {
+	for (k=0;k<inputarray.length;k++) {
+		if (k ==0) {
+			max = inputarray[0];
+		} else {
+			max = maxOf(max, inputarray[k]);
+		}
+	}
+	return(max);
+}
+
+// get minimum value in array 
+
+function getmin(inputarray) {
+	for (k=0;k<inputarray.length;k++) {
+		if (k ==0) {
+			min = inputarray[0];
+		} else {
+			min = minOf(min, inputarray[k]);
+		}
+	}
+	return(min);
+}
+
+// get array from text file
+// http://imagej.1557.x6.nabble.com/read-values-from-txt-file-td3689457.html
+pathfile=File.openDialog("Choose the file to Open:"); 
+filestring=File.openAsString(pathfile); 
+rows=split(filestring, "\n"); 
+x=newArray(rows.length); 
+y=newArray(rows.length); 
+for(i=0; i<rows.length; i++){ 
+	columns=split(rows[i],"\t"); 
+	x[i]=columns[0]; 
+	y[i]=parseInt(columns[1]); 
+} 
+Array.print(x);
+Array.print(y);
